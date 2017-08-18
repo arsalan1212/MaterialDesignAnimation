@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arsalankhan.materialdesignanimation.MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/reveal_click"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#FF9800"
+    android:visibility="gone"
+    >
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:id="@+id/btn_close"
+    android:src="@drawable/ic_close"
+    android:background="#FF9800"
+    />
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name...."
+        android:layout_below="@id/btn_close"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email....."
+        android:layout_below="@id/editTextName"/>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="#FFE0B2"
+        android:layout_below="@id/editTextEmail"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RelativeLayoutAllViews">
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Ripple Animation"
+        android:textAllCaps="false"
+        android:onClick="RippleAnimation"
+     />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:onClick="TransitionAnimation"
+       >
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arsalan Khan"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:transitionName="name"/>
+
+        <TextView
+            android:id="@+id/textViewAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Animation"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:transitionName="animation"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:layout_toRightOf="@+id/linearLayout"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:padding="15dp"
+            android:transitionName="image"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="52dp"
+        android:text="Circular Reveal Animation"
+        android:textAllCaps="false"
+        android:onClick="CircularRevealAnimation"
+        />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="63dp"
+            android:text="Slide XML"
+            android:onClick="SlideAnimation"
+            android:layout_below="@+id/button2"
+            android:layout_alignEnd="@+id/linearLayout" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="145dp"
+            android:layout_marginStart="27dp"
+            android:text="Explode Java"
+            android:textAllCaps="false"
+            android:onClick="ExplodeAnimation"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
